@@ -3,15 +3,14 @@
 #Alejandro Ferrer-Peasley
 echo "enter a positive number: "
 read NUMBER
-COUNTER=0
-         while [  $COUNTER -lt NUMBER]
-         do
-          if [ $((COUNTER%2)) -eq 0]
-          then
-             echo $COUNTER is even
-          else
-             echo $COUNTER is odd
-          fi
-         done
 
-~   
+for (( i = 1; i <= $NUMBER; i++ ))
+do
+  if [ $((i%2)) -eq 0 ]
+  then
+    echo "$i is even"
+  else
+    echo "$i is odd"
+  fi
+done
+read NUMBER
